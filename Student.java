@@ -1,27 +1,24 @@
-package Week21;
+package Week23;
 
-import java.util.*;
 
-/**
- * Write a description of class Student here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Student
+class Student extends Person
 {
-    private String name, gender, course;
-    private ArrayList<String> hobbies;
+    private String course;
 
-    public Student(String name, String gender, String course, ArrayList<String> hobbies) {
-        this.name = name;
-        this.gender = gender;
-        this.hobbies = hobbies;
+    public Student(String name, int age, String course)
+    {
+        super(name, age);
         this.course = course;
     }
 
     @Override
-    public String toString(){
-        return "Name: "+name+ " Gender: "+gender + " Course: "+ course + " Hobbies: "+ hobbies ;
+    public String performRole()
+    {
+        return name + " studies " + course;
+    }
+
+    public String attendClass()
+    {
+        return name + " is attending class.";
     }
 }
